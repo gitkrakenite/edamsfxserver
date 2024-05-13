@@ -15,11 +15,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-// DB connection
-connectDB();
-
 // routes
 app.get("/", (req, res) => res.status(200).send("API WORKING WELL"));
+// DB connection
+connectDB();
 
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/report", reportRouter);
