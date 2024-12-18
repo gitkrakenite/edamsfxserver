@@ -24,5 +24,7 @@ app.use("/api/v1/users", userRouter);
 app.use("/api/v1/report", reportRouter);
 app.use("/api/v1/notify", notifyRouter);
 
+app.get("/lost", (req, res) => res.status(200).send("You are lost"));
+
 // listener
 app.listen(PORT, console.log(`Server running on port: ${PORT}`));
